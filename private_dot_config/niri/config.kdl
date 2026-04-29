@@ -1,0 +1,11 @@
+include "./options/input.kdl"
+include "./options/startup.kdl"
+include "./options/binds.kdl"
+include "./options/animations.kdl"
+include "./options/gestures.kdl"
+include "./options/layout.kdl"
+include "./options/miscellaneous.kdl"
+include "./options/rules.kdl"
+
+include "./noctalia.kdl"
+

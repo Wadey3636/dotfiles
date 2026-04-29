@@ -1,0 +1,15 @@
+input {
+    keyboard {
+        xkb {
+          options "caps:super"
+        }
+        numlock
+    }
+    
+    touchpad {
+      accel-speed 0.25
+      scroll-factor vertical=-0.25 horizontal=0.5
+      tap-button-map "left-middle-right"
+      tap
+    }
+}
