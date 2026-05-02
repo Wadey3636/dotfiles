@@ -1,10 +1,12 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 require("plugins.load_plugins")
+
 require("config.binds")
+require("config.autopairs_configuration")
 
+require('vim._core.ui2').enable({})
 
-require('vim._core.ui2').enable()
 
 vim.opt.termguicolors = true
 

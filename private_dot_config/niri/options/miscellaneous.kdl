@@ -1,0 +1,19 @@
+xwayland-satellite {
+    path "xwayland-satellite"
+}
+
+spawn-at-startup "bash" "./../scripts/set_ssh_sock.sh"
+
+environment {
+    EDITOR "nvim"
+    FILE_MANAGER "nautilus"
+}
+
+prefer-no-csd
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+debug {
+  // Allows notification actions and window activation from Noctalia.
+  honor-xdg-activation-with-invalid-serial
+}

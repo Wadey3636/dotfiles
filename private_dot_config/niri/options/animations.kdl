@@ -1,0 +1,19 @@
+
+animations {
+	workspace-switch {
+		off
+	}
+    window-open {
+        duration-ms 50
+        curve "ease-out-expo"
+    }
+	window-close {
+		duration-ms 50
+	}
+	window-movement {
+		duration-ms 75
+	}
+	window-resize {
+		duration-ms 75
+	}
+}

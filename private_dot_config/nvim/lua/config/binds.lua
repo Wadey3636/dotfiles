@@ -1,8 +1,10 @@
-
 vim.keymap.set("n", "<Esc>", ":nohlsearch<CR>")
 
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+vim.keymap.set({"n", "v", "x"}, "<leader>y", "\"+y")
+-- vim.keymap.set("V", "<leader>y", "\"+y")
 
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
@@ -27,7 +29,7 @@ end)
 local harpoon = require("harpoon")
 
 harpoon:setup()
-vim.keymap.set("n", "m", function()
+vim.keymap.set("n", "<leader>a", function()
   local key = vim.fn.getcharstr()
   local list = harpoon:list()
   local item = list.config.create_list_item(list.config)
@@ -41,6 +43,7 @@ vim.keymap.set("n", "<leader>j", function()
   local item = list.items[key]
   if item then
     list.config.select(item, list.config, nil)
+    vim.notify("Jumped to: " .. key)
   else
     vim.notify("No bookmark at: " .. key, vim.log.levels.WARN)
   end

@@ -1,0 +1,36 @@
+window-rule {
+    draw-border-with-background false
+    geometry-corner-radius 12
+    clip-to-geometry true
+
+    background-effect {
+        blur true
+    }
+}
+
+window-rule {
+    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="bottom-right" 
+    open-focused false
+}
+
+window-rule {
+    match app-id="xwaylandvideobridge"
+    open-floating true
+    default-floating-position x=-10000 y=-10000
+}
+
+
+// Open the Firefox picture-in-picture player as floating by default.
+window-rule {
+    // This app-id regular expression will work for both:
+    // - host Firefox (app-id is "firefox")
+    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+window-rule {
+    match app-id="1password"
+    block-out-from "screencast"
+}

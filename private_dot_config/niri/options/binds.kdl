@@ -2,9 +2,9 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+Q hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
-    Mod+R repeat=false hotkey-overlay-title="Open App Launcher" { spawn "bash" "-c" "$HOME/.config/niri/scripts/launcher_rofi.sh"; }
+    Mod+R repeat=false hotkey-overlay-title="Open App Launcher" { spawn "qs" "-c" "noctalia-shell"  "ipc" "call" "launcher" "toggle"; }
     Mod+W repeat=false hotkey-overlay-title="Open Wallpaper Changer" { spawn "bash" "-c" "$HOME/.config/niri/scripts/wallpaper_selector.sh"; }
-    Mod+Shift+E hotkey-overlay-title="Open powermenu" { spawn "bash" "-c" "$HOME/.config/rofi/powermenu/powermenu.sh"; }
+    Mod+Shift+E hotkey-overlay-title="Open powermenu" { spawn "qs" "-c" "noctalia-shell"  "ipc" "call" "sessionMenu" "toggle"; }
     Mod+E hotkey-overlay-title="Run an Application: Nautilus" { spawn "nautilus" "--new-window"; }
   
     //Applications
