@@ -6,7 +6,8 @@ spawn-at-startup "bash" "./../scripts/set_ssh_sock.sh"
 
 environment {
     EDITOR "nvim"
-    FILE_MANAGER "nautilus"
+    FILE_MANAGER "yazi"
+    QS_ICON_THEME "Papirus"
 }
 
 prefer-no-csd

@@ -1,35 +1,44 @@
-vim.keymap.set("n", "<Esc>", ":nohlsearch<CR>")
+local map = vim.keymap.set
 
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
+    
+map("n", "<Esc>", ":nohlsearch<CR>")
 
-vim.keymap.set({"n", "v", "x"}, "<leader>y", "\"+y")
--- vim.keymap.set("V", "<leader>y", "\"+y")
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
 
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
+map({"n", "v", "x"}, "<leader>y", "\"+y")
 
-vim.keymap.set("i", "jk", "<Esc>", { noremap = true, silent = true })
+map("n", "n", "nzzzv")
+map("n", "N", "Nzzzv")
+
+map("i", "jk", "<Esc>", { noremap = true, silent = true })
 
 
 -- Oil Binds
-vim.keymap.set("n", "<leader>e", "<cmd>Oil<cr>")
+map("n", "<leader>e", "<cmd>Oil<cr>")
 
--- Telescope Binds
-local builtin = require('telescope.builtin')
+--Fzf Lua binds
+local fzf = require("fzf-lua")
+map("n", "<leader>pf", function () fzf.files() end)
+map("n", "<leader>pg", function () fzf.grep_visual() end)
+map("n", "<leader>pp", function () fzf.complete_path() end)
+map("n", "<leader>pc", function () fzf.complete_file() end)
+map("n", "<leader>pb", function () fzf.dap_breakpoints() end)
 
-vim.keymap.set("n", "<leader>pf", builtin.find_files, { desc = "Telescope find files" })
-vim.keymap.set("n", "<leader>pg", builtin.live_grep, { desc = "Telescope live grep" })
-vim.keymap.set("n", "<leader>ps", function()
-	builtin.grep_string({ search = vim.fn.input("Grep > ") })
-end)
+--Lsp binds
 
+map("n", "gd", function() fzf.lsp_definitions({ jump1 = true }) end)
+map("n", "gD", function() fzf.lsp_declarations({ jump1 = true }) end)
+map("n", "gt", function() fzf.lsp_typedefs({ jump1 = true }) end)
+map("n", "gr", function() fzf.lsp_references({ jump1 = true }) end)
+map("n", "<leader>r", require("lua.config.renamer"))
+map("n", "ga", function() fzf.lsp_code_actions() end)
 
 -- Harpoon Binds
 local harpoon = require("harpoon")
 
 harpoon:setup()
-vim.keymap.set("n", "<leader>a", function()
+map("n", "<leader>a", function()
   local key = vim.fn.getcharstr()
   local list = harpoon:list()
   local item = list.config.create_list_item(list.config)
@@ -37,7 +46,7 @@ vim.keymap.set("n", "<leader>a", function()
   vim.notify("Bookmarked to: " .. key)
 end)
 
-vim.keymap.set("n", "<leader>j", function()
+map("n", "<leader>j", function()
   local key = vim.fn.getcharstr()
   local list = harpoon:list()
   local item = list.items[key]

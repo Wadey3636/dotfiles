@@ -455,7 +455,7 @@
     "network": {
         "bluetoothAutoConnect": true,
         "bluetoothDetailsViewMode": "grid",
-        "bluetoothHideUnnamedDevices": false,
+        "bluetoothHideUnnamedDevices": true,
         "bluetoothRssiPollIntervalMs": 60000,
         "bluetoothRssiPollingEnabled": false,
         "disableDiscoverability": false,
@@ -658,6 +658,10 @@
             {
                 "enabled": true,
                 "id": "qt"
+            },
+            {
+                "enabled": true,
+                "id": "yazi"
             }
         ],
         "enableUserTheming": false
@@ -684,17 +688,17 @@
         "favorites": [
             {
                 "appearance": "dark",
-                "colorScheme": "Noctalia (default)",
+                "colorScheme": "Nord",
                 "darkMode": true,
                 "generationMethod": "tonal-spot",
                 "paletteColors": [
-                    "#b9c3ff",
-                    "#c3c5dd",
-                    "#e5bad8",
-                    "#ffb4ab"
+                    "#8fbcbb",
+                    "#88c0d0",
+                    "#5e81ac",
+                    "#bf616a"
                 ],
                 "path": "/home/wadey/Pictures/Wallpapers/nord-street.png",
-                "useWallpaperColors": true
+                "useWallpaperColors": false
             }
         ],
         "fillColor": "#000000",

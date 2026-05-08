@@ -5,7 +5,7 @@ binds {
     Mod+R repeat=false hotkey-overlay-title="Open App Launcher" { spawn "qs" "-c" "noctalia-shell"  "ipc" "call" "launcher" "toggle"; }
     Mod+W repeat=false hotkey-overlay-title="Open Wallpaper Changer" { spawn "bash" "-c" "$HOME/.config/niri/scripts/wallpaper_selector.sh"; }
     Mod+Shift+E hotkey-overlay-title="Open powermenu" { spawn "qs" "-c" "noctalia-shell"  "ipc" "call" "sessionMenu" "toggle"; }
-    Mod+E hotkey-overlay-title="Run an Application: Nautilus" { spawn "nautilus" "--new-window"; }
+    Mod+E hotkey-overlay-title="Run an Application: Yazi" { spawn "kitty" "yazi"; }
   
     //Applications
     Mod+B hotkey-overlay-title="Run an Application: Zen Browser" { spawn "/home/felix/.config/niri/scripts/spawnjump.fish" "app_id starts-with zen" "zen-browser"; }
