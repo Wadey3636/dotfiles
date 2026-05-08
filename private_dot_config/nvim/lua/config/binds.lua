@@ -31,7 +31,9 @@ map("n", "gd", function() fzf.lsp_definitions({ jump1 = true }) end)
 map("n", "gD", function() fzf.lsp_declarations({ jump1 = true }) end)
 map("n", "gt", function() fzf.lsp_typedefs({ jump1 = true }) end)
 map("n", "gr", function() fzf.lsp_references({ jump1 = true }) end)
-map("n", "<leader>r", require("lua.config.renamer"))
+
+local renamer = require("config.renamer")
+map("n", "<leader>r", renamer)
 map("n", "ga", function() fzf.lsp_code_actions() end)
 
 -- Harpoon Binds
