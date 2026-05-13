@@ -2,8 +2,6 @@ xwayland-satellite {
     path "xwayland-satellite"
 }
 
-spawn-at-startup "bash" "./../scripts/set_ssh_sock.sh"
-
 environment {
     EDITOR "nvim"
     FILE_MANAGER "yazi"
