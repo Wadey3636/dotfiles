@@ -4,11 +4,15 @@ return {
         ensure_installed = {
             "pylsp",
             "kotlin_lsp",
-            "rust_analyzer",
             "ts_ls",
             "html",
             "cssls",
-            "lua_ls"
+            "lua_ls",
+        },
+        automatic_enable = {
+            exclude = {
+                "rust_analyzer"
+            }
         }
     },
     dependencies = {

@@ -13,7 +13,6 @@ map("n", "N", "Nzzzv")
 
 map("i", "jk", "<Esc>", { noremap = true, silent = true })
 
-
 -- Oil Binds
 map("n", "<leader>e", "<cmd>Oil<cr>")
 
@@ -59,3 +58,6 @@ map("n", "<leader>j", function()
     vim.notify("No bookmark at: " .. key, vim.log.levels.WARN)
   end
 end)
+
+--blink cmp
+--The binds are in the plugin file.

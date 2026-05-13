@@ -12,7 +12,9 @@ sudo pacman -S --needed --noconfirm ttf-jetbrains-mono-nerd curl unzip kitty sea
 sudo pacman -S --needed --noconfirm yazi jq poppler fd resvg imagemagick tree-sitter-cli
 sudo pacman -R --needed alacritty nautilus
 
-paru -S --needed --norebuild noctalia-shell vesktop 1password spicetify paru libadwaita-without-adwaita zen-browser-bin
+rustup component add rust-analyzer
+
+paru -S --needed --norebuild noctalia-shell vesktop 1password spicetify paru libadwaita-without-adwaita zen-browser-bin nordzy-icon-theme spotify
 
 if [ -d "/usr/share/sddm/themes/sddm-astronaut-theme" ]; then
     echo "Astronaut theme installed"

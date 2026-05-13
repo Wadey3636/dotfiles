@@ -44,6 +44,24 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
+git() {
+  if [[ "$1" == "fetch" || "$1" == "pull" ]]; then
+    local remote_url
+    remote_url=$(command git remote get-url "${2:-origin}" 2>/dev/null)
+    if [[ "$remote_url" == git@* || "$remote_url" == ssh://* ]]; then
+      if ! ssh-add -l &>/dev/null; then
+        ssh-add ~/.ssh/git
+      fi
+    fi
+  elif [[ "$1" == "clone" ]]; then
+    if [[ "$2" == git@* || "$2" == ssh://* ]]; then
+      if ! ssh-add -l &>/dev/null; then
+        ssh-add ~/.ssh/git
+      fi
+    fi
+  fi
+  command git "$@"
+}
 zstyle 'completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle 'completion:*' list-colors '${(s.:.)LS_COLORS}'
 zstyle 'completion:*' menu no
