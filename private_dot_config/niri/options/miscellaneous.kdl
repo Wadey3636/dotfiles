@@ -6,8 +6,8 @@ environment {
     EDITOR "nvim"
     FILE_MANAGER "yazi"
     QS_ICON_THEME "Papirus"
-    SSH_ASKPASS "/usr/lib/seahorse/ssh-askpass"
-    SSH_ASKPASS_REQUIRE "force"
+    // SSH_ASKPASS "/usr/lib/seahorse/ssh-askpass"
+    // SSH_ASKPASS_REQUIRE "prefer"
 }
 
 prefer-no-csd

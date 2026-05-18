@@ -131,6 +131,7 @@ binds {
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
 
     Print { screenshot; }
+    Mod+Shift+P { screenshot; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 
