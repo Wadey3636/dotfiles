@@ -14,6 +14,7 @@ sudo pacman -S --needed --noconfirm yazi jq poppler fd resvg imagemagick tree-si
 sudo pacman -R --needed alacritty nautilus
 
 rustup component add rust-analyzer
+paru -S --needed --norebuild noctalia-shell vesktop 1password spicetify paru libadwaita-without-adwaita zen-browser-bin nordzy-icon-theme
 
 paru -S --needed --norebuild noctalia-shell vesktop 1password spicetify paru libadwaita-without-adwaita zen-browser-bin nordzy-icon-theme spotify
 
