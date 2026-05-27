@@ -8,6 +8,7 @@ return {
             "html",
             "cssls",
             "lua_ls",
+            "ols"
         },
         automatic_enable = {
             exclude = {
