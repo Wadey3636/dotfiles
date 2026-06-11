@@ -26,12 +26,13 @@ binds {
     XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
     XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
 
-    Super+C repeat=false { close-window; }
+    Mod+C repeat=false { close-window; }
 
-    Super+H     { focus-column-or-monitor-left; }
-    Super+J     { focus-window-or-monitor-down; }
-    Super+K     { focus-window-or-monitor-up; }
-    Super+L     { focus-column-or-monitor-right; }
+
+    Mod+H   { focus-column-or-monitor-left; }
+    Mod+J   { focus-window-or-monitor-down; }
+    Mod+K   { focus-window-or-monitor-up; }
+    Mod+L   { focus-column-or-monitor-right; }
 
     Mod+Shift+H     { move-column-left; }
     Mod+Shift+J     { move-window-down; }

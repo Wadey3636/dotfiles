@@ -19,7 +19,7 @@ map("n", "<leader>e", "<cmd>Oil<cr>")
 --Fzf Lua binds
 local fzf = require("fzf-lua")
 map("n", "<leader>pf", function () fzf.files() end)
-map("n", "<leader>pg", function () fzf.grep_visual() end)
+map("n", "<leader>pg", function () fzf.live_grep() end)
 map("n", "<leader>pp", function () fzf.complete_path() end)
 map("n", "<leader>pc", function () fzf.complete_file() end)
 map("n", "<leader>pb", function () fzf.dap_breakpoints() end)
