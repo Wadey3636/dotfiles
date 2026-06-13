@@ -62,3 +62,10 @@ alias matugen='matugen --mode dark'
 
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
+
+# bun completions
+[ -s "/home/wadey/.bun/_bun" ] && source "/home/wadey/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

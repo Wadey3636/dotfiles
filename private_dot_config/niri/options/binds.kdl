@@ -27,6 +27,7 @@ binds {
     XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
 
     Mod+C repeat=false { close-window; }
+    Mod+M { fullscreen-window; }
 
 
     Mod+H   { focus-column-or-monitor-left; }
