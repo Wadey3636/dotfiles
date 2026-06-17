@@ -10,7 +10,7 @@ source ./scripts/install_paru.sh
 bash ./scripts/install_zsh.sh
 
 sudo pacman -S --needed --noconfirm ttf-jetbrains-mono-nerd curl unzip kitty seahorse xwayland-satellite fzf btop fastfetch ripgrep tmux adw-gtk-theme neovim wl-clipboard
-sudo pacman -S --needed --noconfirm yazi jq poppler fd resvg imagemagick tree-sitter-cli
+sudo pacman -S --needed --noconfirm yazi jq poppler fd resvg imagemagick tree-sitter-cli gnome-keyring seahorse
 sudo pacman -R --needed alacritty nautilus
 
 rustup component add rust-analyzer
@@ -45,3 +45,8 @@ gtk4-update-icon-cache
 
 bash ./scripts/setup_noctalia_templates.sh
 xdg-mime default yazi.desktop inode/directory
+systemctl enable --user gcr-ssh-agent.socket --now
+
+if ! [ -d "~/.tmux/plugins/tpm" ]; then
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
