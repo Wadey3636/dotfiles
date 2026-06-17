@@ -8,10 +8,10 @@ binds {
     Mod+E hotkey-overlay-title="Run an Application: Yazi" { spawn "kitty" "yazi"; }
   
     //Applications
-    Mod+B hotkey-overlay-title="Run an Application: Zen Browser" { spawn "/home/wadey/.config/niri/scripts/spawnjump.fish" "app_id starts-with zen" "zen-browser"; }
-    Mod+D hotkey-overlay-title="Run an Application: Vesktop" { spawn "/home/wadey/.config/niri/scripts/spawnjump.fish" "app_id starts-with vesktop" "vesktop"; }
-    Mod+S hotkey-overlay-title="Run an Application: Spotify" { spawn "/home/wadey/.config/niri/scripts/spawnjump.fish" "app_id starts-with spotify" "spotify"; }
-    Mod+N hotkey-overlay-title="Jump to Nvim: Nvim" { spawn "/home/wadey/.config/niri/scripts/spawnjump.fish" "app_id starts-with kitty" "title == nvim" "kitty"; }
+    // Mod+B hotkey-overlay-title="Run an Application: Zen Browser" { spawn "/home/wadey/.config/niri/scripts/spawnjump.fish" "app_id starts-with zen" "zen-browser"; }
+    // Mod+D hotkey-overlay-title="Run an Application: Vesktop" { spawn "/home/wadey/.config/niri/scripts/spawnjump.fish" "app_id starts-with vesktop" "vesktop"; }
+    // Mod+S hotkey-overlay-title="Run an Application: Spotify" { spawn "/home/wadey/.config/niri/scripts/spawnjump.fish" "app_id starts-with spotify" "spotify"; }
+    // Mod+N hotkey-overlay-title="Jump to Nvim: Nvim" { spawn "/home/wadey/.config/niri/scripts/spawnjump.fish" "app_id starts-with kitty" "title == nvim" "kitty"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
