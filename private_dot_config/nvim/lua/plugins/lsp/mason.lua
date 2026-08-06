@@ -9,7 +9,9 @@ return {
             "cssls",
             "lua_ls",
             "ols",
-            "zls"
+            "zls",
+            "cls",
+            "clangd"
         },
         automatic_enable = {
             exclude = {
